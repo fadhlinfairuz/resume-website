@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & References | E-Resume</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="brand">NUR FADHLIN BINTI AHMAD FAIRUZ — E-Resume</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+
+      <div class="nav-item">
+        <input type="checkbox" id="dropdown-toggle">
+        <label for="dropdown-toggle" class="nav-label">Personal ▾</label>
+        <div class="dropdown">
+          <a href="pers.html">Personal Details</a>
+          <a href="edu.html#primary">Primary</a>
+          <a href="edu.html#secondary">Secondary</a>
+          <a href="edu.html#stpm">STPM</a>
+          <a href="edu.html#current">Current Study</a>
+        </div>
+      </div>
+
+      <a href="skills.html">Skills</a>
+      <a href="gal.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="hero-content">
+    <h1>Contact & References</h1>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <h2>Contact Information</h2>
+    <p><strong>Email:</strong> 
+       <a href="mailto:fadhlinfairuz03@gmail.com">fadhlinfairuz03@gmail.com</a>
+    </p>
+    <p><strong>WhatsApp:</strong> 
+       <a href="https://wa.me/60168857433" target="_blank">+60 16-8857433</a>
+    </p>
+
+    <h2>Send Me a Message</h2>
+    <form action="mailto:fadhlinfairuz03@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+      <label>Your Name:</label>
+      <input type="text" name="Name" required>
+
+      <label>Your Email:</label>
+      <input type="email" name="Email" required>
+
+      <label>Your Message:</label>
+      <textarea name="Message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <h2>References</h2>
+    <table>
+      <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Position</strong></td>
+        <td><strong>Contact</strong></td>
+      </tr>
+      <tr>
+        <td>Sir Mahadi Bin Mahmood</td>
+        <td>Lecturer</td>
+        <td>+60 14-9449848</td>
+      </tr>
+    </table>
+
+    <section class="download-resume">
+      <h2>Download My Resume</h2>
+      <p>You can download the full resume in PDF format below:</p>
+
+      <a href="resume1.pdf" download class="download-btn">
+        Download Resume
+      </a>
+    </section>
+
+  </section>
+
+  <div class="pager">
+    <a class="btn secondary" href="gal.html">Previous</a>
+    <a class="btn" href="home.html">Home</a>
+  </div>
+
+  <footer class="footer">
+    <small>© Fadhlin Fairuz — Last update: 2025</small>
+  </footer>
+
+</main>
+</body>
+</html>

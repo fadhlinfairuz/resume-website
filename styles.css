@@ -1,0 +1,150 @@
+:root{
+  --mid-blue: #0f4c81;
+  --dark-blue: #07263f;
+  --light-blue: #e9f3ff;
+  --accent: #1e90ff;
+  --muted: #6b7a90;
+  --bg: #f5f9ff;
+  --max-width: 1000px;
+  --radius: 10px;
+  --transition: 0.35s;
+  --nav-height: 64px;
+  --content-padding: 24px;
+  --text: #0b2540;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:var(--max-width);margin:calc(var(--nav-height) + 20px) auto;padding:var(--content-padding);background:#fff;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,18,53,0.08)}
+
+.navbar{
+  position:fixed;top:0;left:0;right:0;height:var(--nav-height);
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(90deg,var(--mid-blue),var(--dark-blue));
+  z-index:1000;box-shadow:0 2px 8px rgba(3,23,57,0.25);
+}
+.nav-inner{width:var(--max-width);display:flex;align-items:center;justify-content:space-between;color:#fff}
+.brand{font-weight:700;letter-spacing:0.4px;color:#fff}
+.nav-links{display:flex;gap:12px;align-items:center}
+.nav-links a{padding:8px 12px;border-radius:8px;font-weight:600;color:#fff;opacity:0.95}
+.nav-links a:hover{background:rgba(255,255,255,0.06)}
+
+.nav-item{position:relative}
+.nav-item input[type="checkbox"]{display:none}
+
+
+.nav-label{
+  cursor:pointer;
+  padding:8px 12px;
+  font-weight:600;
+  color:#fff;
+  border-radius:8px;
+  display:inline-block;
+}
+.nav-label:hover{background:rgba(255,255,255,0.06)}
+
+.dropdown{
+  position:absolute;
+  top:var(--nav-height);
+  left:0;
+  min-width:220px;
+  background:#fff;
+  color:var(--text);
+  border-radius:8px;
+  box-shadow:0 8px 20px rgba(3,23,57,0.12);
+  overflow:hidden;
+  display:none;
+  z-index:999;
+}
+
+#dropdown-toggle:checked ~ .dropdown{display:block}
+
+.dropdown a{
+  display:block;
+  padding:10px 14px;
+  border-bottom:1px solid #f1f4fb;
+  color:var(--text);
+}
+.dropdown a:last-child{border-bottom:none}
+.dropdown a:hover{background:var(--light-blue)}
+
+.header{display:flex;gap:20px;align-items:center;padding:20px;border-radius:8px;background:rgba(15,76,129,0.05)}
+.header img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.hero-img{flex:0 0 120px;height:140px;overflow:hidden}
+.hero-content h1{margin:0;font-size:1.6rem;color:var(--mid-blue)}
+.meta{color:var(--muted)}
+
+.section{margin-top:18px}
+.section h2{font-size:1.2rem;color:var(--dark-blue)}
+
+.media-block{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+audio,video{width:50%;border-radius:8px;background:#000}
+
+.edu-card{display:grid;gap:12px}
+.edu-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:8px;border:1px solid #edf3ff;background:#fbfdff}
+.edu-item img{width:100px;height:100px;object-fit:cover;border-radius:6px}
+
+.accordion{display:flex;flex-direction:column;gap:10px}
+.accordion .item{border:1px solid #e6eefc;border-radius:8px;background:#fff;overflow:hidden}
+.accordion input{display:none}
+.accordion label{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 16px;font-weight:700;color:var(--mid-blue);cursor:pointer;
+}
+.accordion .content{
+  max-height:0;overflow:hidden;padding:0 16px;
+  transition:max-height var(--transition), padding var(--transition);
+}
+.accordion input:checked + label + .content{
+  padding:12px 16px;max-height:600px;
+}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.gallery-card{border:1px solid #eef5ff;border-radius:8px;overflow:hidden;background:#fff}
+.gallery-card img{width:100%;height:180px;object-fit:cover;display:block}
+
+.pager{display:flex;justify-content:space-between;margin-top:20px}
+.btn{padding:10px 14px;border-radius:8px;background:var(--mid-blue);color:#fff;font-weight:700}
+.btn.secondary{background:#f1f5fb;color:var(--mid-blue);border:1px solid #d9e7ff}
+
+.contact-form input, .contact-form textarea { width: 100%; padding: 10px; border: 1px solid var(--mid-blue); border-radius: 8px; margin-bottom: 14px; }
+
+/* Download Resume Section */
+.download-resume {
+    margin-top: 30px;
+    padding: 30px;
+    background: var(--light-blue);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.download-resume h2 {
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: var(--mid-blue);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: var(--accent);
+}
+
+.footer{text-align:center;margin-top:18px;color:var(--muted)}
+.footer small{display:block}
+
+
+@media(max-width:700px){
+  .header{flex-direction:column}
+  .hero-img{width:100%;height:200px}
+  .nav-links{display:none}
+}
